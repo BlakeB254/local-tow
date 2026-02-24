@@ -46,7 +46,7 @@ export function OfferCard({
         {/* Provider info row */}
         <div className="flex items-center justify-between mb-3">
           <div>
-            <p className="font-semibold text-foreground">{offer.providerName}</p>
+            <p className="font-semibold text-foreground truncate">{offer.providerName}</p>
             <div className="flex items-center gap-2 text-xs text-muted-foreground mt-0.5">
               {offer.providerRating != null && (
                 <span className="flex items-center gap-0.5">
@@ -58,8 +58,8 @@ export function OfferCard({
                 <span>{offer.providerJobCount} jobs</span>
               )}
               {offer.equipmentType && (
-                <span className="flex items-center gap-0.5">
-                  <Truck size={12} />
+                <span className="flex items-center gap-0.5 truncate">
+                  <Truck size={12} className="shrink-0" />
                   {offer.equipmentType}
                 </span>
               )}
@@ -76,7 +76,7 @@ export function OfferCard({
 
         {/* Optional message */}
         {offer.message && (
-          <p className="text-sm text-muted-foreground bg-muted/50 rounded-md p-2 mb-3 italic">
+          <p className="text-sm text-muted-foreground bg-muted/50 rounded-md p-2 mb-3 italic line-clamp-2">
             &ldquo;{offer.message}&rdquo;
           </p>
         )}

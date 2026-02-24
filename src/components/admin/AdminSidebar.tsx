@@ -56,7 +56,7 @@ export function AdminSidebar() {
                 "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
                 active
                   ? "bg-[#FF6700]/10 text-[#FF6700]"
-                  : "text-[#003366]/70 hover:bg-gray-50 hover:text-[#003366]"
+                  : "text-[#003366] hover:bg-gray-50 hover:text-[#FF6700]"
               )}
             >
               <Icon className="h-5 w-5 shrink-0" />
@@ -72,7 +72,7 @@ export function AdminSidebar() {
           href="/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-[#003366]/70 transition-colors hover:bg-gray-50 hover:text-[#003366]"
+          className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-[#003366] transition-colors hover:bg-gray-50 hover:text-[#FF6700]"
         >
           <ExternalLink className="h-5 w-5 shrink-0" />
           View Site

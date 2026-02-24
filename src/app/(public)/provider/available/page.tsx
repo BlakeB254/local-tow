@@ -83,7 +83,7 @@ export default function AvailableRequestsPage() {
         {/* Back link */}
         <Link
           href="/provider"
-          className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 mb-6 transition-colors"
+          className="inline-flex items-center gap-1.5 text-sm text-gray-600 hover:text-gray-900 mb-6 transition-colors"
         >
           <ArrowLeft size={14} />
           Back to Dashboard
@@ -117,7 +117,7 @@ export default function AvailableRequestsPage() {
                 <RequestCard request={req} showDistance />
                 <div className="mt-2 flex justify-end gap-2">
                   <Link href={`/customer/request/${req.id}`}>
-                    <Button variant="ghost" size="sm" className="text-xs text-gray-500">
+                    <Button variant="outline" size="sm" className="text-xs border-gray-300">
                       View Details
                     </Button>
                   </Link>

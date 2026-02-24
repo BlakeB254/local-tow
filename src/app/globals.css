@@ -260,6 +260,10 @@
     0 0 60px color-mix(in srgb, var(--brand-primary, #6366F1) 20%, transparent);
   transform: translateY(-1px);
 }
+.btn-cta:focus-visible {
+  outline: 2px solid var(--brand-accent, #8B5CF6);
+  outline-offset: 2px;
+}
 
 /* ── Noise Overlay ── */
 .noise-overlay::before {
