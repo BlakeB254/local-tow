@@ -26,6 +26,13 @@ export interface BrandConfig {
   contactPhone: string;
   launchMarket: string;
   founded: number;
+  logo: {
+    icon: string;
+    horizontal: string;
+    full: string;
+    ogImage: string;
+    favicon: string;
+  };
   intensity: IntensityMode;
   heroVariant: HeroVariant;
   darkMode: "dark-only" | "light-only" | "toggle";
@@ -69,6 +76,13 @@ export const brand: BrandConfig = {
   contactPhone: "(312) 555-8TOW",
   launchMarket: "Chicago, IL",
   founded: 2024,
+  logo: {
+    icon: "/brand/app-icon.jpg",
+    horizontal: "/brand/logo-horizontal.jpg",
+    full: "/brand/logo-full.jpg",
+    ogImage: "/brand/og-image.jpg",
+    favicon: "/favicon.png",
+  },
 
   intensity: "immersive",
   heroVariant: "fullscreen",

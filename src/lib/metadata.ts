@@ -12,6 +12,10 @@ export function createMetadata(overrides: Partial<Metadata> = {}): Metadata {
     },
     description,
     keywords: brand.seo.keywords,
+    icons: {
+      icon: brand.logo.favicon,
+      apple: "/apple-touch-icon.png",
+    },
     openGraph: {
       type: "website",
       locale: "en_US",
@@ -19,11 +23,13 @@ export function createMetadata(overrides: Partial<Metadata> = {}): Metadata {
       title: typeof title === "string" ? title : brand.seo.title,
       description: typeof description === "string" ? description : brand.seo.description,
       url: brand.url,
+      images: [{ url: brand.logo.ogImage, width: 1200, height: 630, alt: brand.name }],
     },
     twitter: {
       card: "summary_large_image",
       title: typeof title === "string" ? title : brand.seo.title,
       description: typeof description === "string" ? description : brand.seo.description,
+      images: [brand.logo.ogImage],
     },
     metadataBase: new URL(brand.url),
     ...overrides,
