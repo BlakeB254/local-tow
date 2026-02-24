@@ -1,0 +1,23 @@
+import Stripe from "stripe";
+
+let _stripe: Stripe | null = null;
+
+function getStripe(): Stripe {
+  if (!_stripe) {
+    const key = process.env.STRIPE_SECRET_KEY;
+    if (!key) throw new Error("STRIPE_SECRET_KEY is not set");
+    _stripe = new Stripe(key, {
+      apiVersion: "2025-01-27.acacia" as Stripe.LatestApiVersion,
+    });
+  }
+  return _stripe;
+}
+
+// Lazy proxy — imports succeed at build time without STRIPE_SECRET_KEY
+const stripe = new Proxy({} as Stripe, {
+  get(_target, prop) {
+    return (getStripe() as unknown as Record<string | symbol, unknown>)[prop];
+  },
+});
+
+export default stripe;
